@@ -1,0 +1,11 @@
+.gradle
+/build
+/out
+/.idea
+*.iml
+*.log
+bin/
+*.jar
+.DS_Store
+target/
+/.serena
