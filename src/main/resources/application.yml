@@ -15,6 +15,11 @@ spring:
 
   kafka:
     bootstrap-servers: my-cluster-kafka-bootstrap.kafka.svc:9092
+
+logging:
+  level:
+    "[org.apache.kafka]": INFO
+    "[org.springframework.kafka]": INFO
 ---
 spring:
   config:
