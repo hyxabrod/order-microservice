@@ -1,6 +1,6 @@
 package com.example.order.kafka;
 
-import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -39,7 +39,8 @@ public class OrdersRequestListener {
 
         OrderReply reply;
         if (available) {
-            UUID orderId = UUID.randomUUID();
+            int orderId = ThreadLocalRandom.current().nextInt(1, Integer.MAX_VALUE);
+
             reply = OrderReply.ok(request.requestId(), orderId);
         } else {
             reply = OrderReply.error(request.requestId(), "PE001");
