@@ -34,7 +34,6 @@ public class OrdersRequestListener {
     )
     public void onRequest(ConsumerRecord<String, OrderRequest> record) {
         OrderRequest request = record.value();
-
         boolean available = productAvailabilityService.isAvailable(request.productId());
 
         OrderReply reply;

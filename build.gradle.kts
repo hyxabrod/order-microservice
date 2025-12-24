@@ -21,5 +21,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     runtimeOnly("org.postgresql:postgresql")
-    implementation("com.example:kafka-contracts:0.1.0")
+    implementation("org.apache.kafka:kafka-streams")
+
+    implementation("com.example:kafka-contracts:0.2.0")
 }
